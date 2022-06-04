@@ -26,7 +26,7 @@ app.get("/auth/me", middleware.authenticate, authController.currentUser);
 
 
 // tesing route
-app.get("/testing-ci-cd", () => "working");
+app.get("/testing-ci-cd/:id", usersController.getPostsByID);
 
 // login google
 app.post("/auth/login-google", authController.loginGoogle);
