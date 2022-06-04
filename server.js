@@ -24,6 +24,10 @@ app.post("/auth/register", authController.register);
 app.post("/auth/login", authController.login);
 app.get("/auth/me", middleware.authenticate, authController.currentUser);
 
+
+// tesing route
+app.get("/testing-ci-cd", () => "working");
+
 // login google
 app.post("/auth/login-google", authController.loginGoogle);
 
